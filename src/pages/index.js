@@ -1,22 +1,32 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
+import Header from "../components/header"
+import Navigation from "../components/navigation"
+import Faces from "../components/faces"
+import Footer from "../components/footer"
 import SEO from "../components/seo"
+// @fortawesome libraries
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import { fas } from "@fortawesome/free-solid-svg-icons"
+// add fas and fab to the library
+library.add(fab, fas)
 
+// Main app page
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+  <div className="home">
+    <SEO 
+      title="Portafolio y blog de @flaex_ | Freddy Polanía"
+      description= "Muestras de trabajos, blog de diseño gráfico y tecnologías web"
+      keywords= "Diseño logos impresos web tipografía desarrollo web temas CMS front-end"
+    />
+    <h1 className="hidden">Portafolio & blog Freddy Polanía - @flaex_</h1>
+    <div className="menu">
+      <Header />
+      <Navigation />
+      <Faces />
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
+    <Footer />
+  </div>
 )
 
 export default IndexPage
