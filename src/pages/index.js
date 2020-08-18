@@ -1,5 +1,4 @@
 import React from "react"
-import Header from "../components/header"
 import Navigation from "../components/navigation"
 import Faces from "../components/faces"
 import Footer from "../components/footer"
@@ -14,16 +13,17 @@ library.add(fab, fas)
 // Main app page
 const IndexPage = () => (
   <div className="home">
-    <SEO 
+    <SEO
       title="Portafolio y blog de @flaex_ | Freddy Polanía"
-      description= "Muestras de trabajos, blog de diseño gráfico y tecnologías web"
-      keywords= "Diseño logos impresos web tipografía desarrollo web temas CMS front-end"
+      description="Muestras de trabajos, blog de diseño gráfico y tecnologías web"
+      keywords="Diseño logos impresos web tipografía desarrollo web temas CMS front-end"
     />
     <h1 className="hidden">Portafolio & blog Freddy Polanía - @flaex_</h1>
     <div className="menu">
-      <Header />
-      <Navigation />
-      <Faces />
+      <div>
+        <Navigation />
+        <Faces />
+      </div>
     </div>
     <Footer />
   </div>
